@@ -36,25 +36,14 @@ function multiplyThree( num1, num2, num3 ){
 console.log('Three numbers, multiplied:', multiplyThree(1, 2, 4));
 
 
-
-
-
-
-
-
-
-
-
-
-
 // 5. Function that will return true if a number is positive, 
 //    or greater than zero, and false otherwise
 function isPositive( number ){
-  if( number > 0 ){
-    return 'true';
+  if( number>0 ){
+    return true;
   }
   else{
-    return 'false';
+    return false;
   }
 }
 // Call the function to test each outcome (true & false) 
@@ -62,40 +51,45 @@ function isPositive( number ){
 console.log( 'isPositive - should say true', isPositive(3) );
 console.log( 'isPositive - should say false', isPositive(0) );
 console.log( 'isPositive - should say false', isPositive(-3) );
-
-// WHY ISN'T THIS WORKING?!?!?!?!?!?
-
-
-// ORIGINAL
-// 5. Function that will return true if a number is positive, 
-//    or greater than zero, and false otherwise
-function isPositive( number ) {
-  if ( number > 0 ){
-    return;
-  }
-    return;
-}
-// Call the function to test each outcome (true & false) 
-// Write a separate console.log statement for each outcome
-console.log( 'isPositive - should say true', isPositive(3) );
-console.log( 'isPositive - should say false', isPositive(0) );
-console.log( 'isPositive - should say false', isPositive(-3) );
-
-
 
 
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
-function getLast( array ) {
-
+let todaysMusic = ['Prince', 'Father John Misty', 'Tom Waits', 'Billie Holiday']
+function getLast() {
+  let lastArtist = todaysMusic[todaysMusic.length - 1];
+  if(todaysMusic.length > 0){
+    return lastArtist;
+  }
+  if(todaysMusic.length < 0){
+    return 'undefined';
+  }
 }
+
+console.log('The last music of the day is:', getLast());
+
 
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
-function find( value, array ){
-  
+let londonTour = ['Camdentown', 'Highgate Cemetery', 'Tate Modern', 'British Library', 'Carnaby Street']
+function find(inquiry){
+  for(place of londonTour){
+    if(place===inquiry){
+      return true;
+    }
+  }
+  return false;
 }
+
+console.log('Is it in the itinerary?', find('Tate Modern'));
+// I don't fully understand why the "return false" worked here (where it is located) -
+// I thought it might need an if stmt of its own, but...
+// I just tried it here because when it was inside the for loop as an else stmt
+// it seemed to stop the loop after checking only the first array item.
+
+
+
 
 // ----------------------
 // Stretch Goals
