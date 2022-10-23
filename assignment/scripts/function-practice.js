@@ -84,7 +84,7 @@ function find(inquiry){
 
 console.log('Is it in the itinerary?', find('Tate Modern'));
 // I don't fully understand why the "return false" worked here (where it is located) -
-// I thought it might need an if stmt of its own, but...
+// I thought it might need an if/else stmt of its own, but...
 // I just tried it here because when it was inside the for loop as an else stmt
 // it seemed to stop the loop after checking only the first array item.
 
@@ -98,7 +98,6 @@ console.log('Is it in the itinerary?', find('Tate Modern'));
 //    string. Return true if it is, and false otherwise
 function isFirstLetter(letter, string) {
   if (letter == string.charAt(0)){
-    console.log(letter);
     return true;
   }
   else{
@@ -110,11 +109,25 @@ console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
 
 
 // 9. Function to return the sum of all numbers in an array
-function sumAll( ) {
-  let sum = 0
+let numberArray = [4, 8, 15, 16, 23, 42];
+let sum = 0;
+function sumAll() {
+  for(i=0; i<numberArray.length; i++){
+    sum+=numberArray[i];
+  }
   // TODO: loop to add items
+  // I think this would use .push to the array, but don't understand why a
+  // loop would be wanted...
+  // Out of time for this sesh
   return sum;
 }
+
+console.log(sumAll(numberArray));
+
+// I am having trouble grasping when to put something in the function as
+// an argument, and when to put it in the pink parentheses of the log call
+
+
 
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
