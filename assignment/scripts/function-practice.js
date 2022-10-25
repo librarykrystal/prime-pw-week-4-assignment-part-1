@@ -86,7 +86,7 @@ console.log('Is it in the itinerary?', find('Tate Modern'));
 // I don't fully understand why the "return false" worked here (where it is located) -
 // I thought it might need an if/else stmt of its own, but...
 // I just tried it here because when it was inside the for loop as an else stmt
-// it seemed to stop the loop after checking only the first array item.
+// it stopped the loop after checking only the first array item.
 
 
 
@@ -116,16 +116,16 @@ function sumAll() {
     sum+=numberArray[i];
   }
   // TODO: loop to add items
-  // I think this would use .push to the array, but don't understand why a
-  // loop would be wanted...
+  // I think this would use .push to the array?
   // Out of time for this sesh
   return sum;
 }
 
 console.log(sumAll(numberArray));
 
-// I am having trouble grasping when to put something in the function as
-// an argument, and when to put it in the pink parentheses of the log call
+
+// Making the call to stop here for this assignment
+// to make sure I spend some time outside before class!
 
 
 
