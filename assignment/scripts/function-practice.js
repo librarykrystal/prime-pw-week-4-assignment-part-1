@@ -140,7 +140,7 @@ function sumAll(numbers){
   }
   return sum;
 }
-console.log(sumAll(numberArray));
+console.log('#9:', sumAll(numberArray));
 
 
 // 10. Function to return a new array of all positive (greater than zero)
@@ -151,7 +151,7 @@ const numArray = [6, -2, 1, -7, 2, 0];
 function positivesOnly(numbersInput){
   return numbersInput.filter(numby => numby>0);
 }
-console.log(positivesOnly(numArray));
+console.log('#10, positive numbers only:', positivesOnly(numArray));
 
 // Solution above works.
 // (And uses .filter() which I just learned about earlier today - neat!)
@@ -174,7 +174,36 @@ console.log(positivesOnly(numArray));
 // console.log(positivesOnly(numArray));
 
 
-
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
 //     CodeWars(https://www.codewars.com/). Then describe it 
 //     here in a comment, write the function, and test it!
+
+// https://edabit.com/challenge/Q3n42rEWanZSTmsJm
+// Create a function that takes an array of numbers
+// and returns both the minimum and maximum numbers, in that order.
+
+const testArrayA = [4, 2, 101, 3, 86];
+const testArrayB = [1];
+
+// First I tried this
+// (but it appears to have sorted alphabetically, by the first digit of each #):
+
+// function minMax(numberray){
+//   for(let i=0; i<numberray.length; i++){
+//     numberray.sort();
+//   }
+//   return numberray[0];
+// }
+// console.log(minMax(testArrayA));
+
+// So I tried to find another way and found out about these Math methods.
+// However, the only way I found to return both is in an array
+// if I just use a comma between I only get the first of the two returned
+
+function minMax(numberray){
+  let highestN = Math.max(...numberray);
+  let lowestN = Math.min(...numberray);
+  return [lowestN, highestN];
+}
+console.log('#11, find lowest and highest:', minMax(testArrayA));
+
