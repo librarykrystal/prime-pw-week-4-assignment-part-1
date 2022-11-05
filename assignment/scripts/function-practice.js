@@ -55,18 +55,35 @@ console.log( 'isPositive - should say false', isPositive(-3) );
 
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
+
+// let todaysMusic = ['Prince', 'Father John Misty', 'Tom Waits', 'Billie Holiday']
+// function getLast() {
+//   let lastArtist = todaysMusic[todaysMusic.length - 1];
+//   if(todaysMusic.length > 0){
+//     return lastArtist;
+//   }
+//   if(todaysMusic.length < 0){
+//     return 'undefined';
+//   }
+// }
+// console.log('The last music of the day is:', getLast());
+
+// REDO BELOW based on graded assignment notes.
+//    (Using param in function/call so other arrays can be passed in.)
+
 let todaysMusic = ['Prince', 'Father John Misty', 'Tom Waits', 'Billie Holiday']
-function getLast() {
-  let lastArtist = todaysMusic[todaysMusic.length - 1];
-  if(todaysMusic.length > 0){
+
+function getLast(musicArray){
+  let lastArtist = musicArray[musicArray.length - 1];
+  if(musicArray.length > 0){
     return lastArtist;
   }
-  if(todaysMusic.length < 0){
-    return 'undefined';
+  if(musicArray.length < 0){
+    return "undefined";
   }
 }
 
-console.log('The last music of the day is:', getLast());
+console.log('The last music of the day is:', getLast(todaysMusic));
 
 
 // 7. Function to find a value in an array. Return true if the 
@@ -74,7 +91,7 @@ console.log('The last music of the day is:', getLast());
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
 let londonTour = ['Camdentown', 'Highgate Cemetery', 'Tate Modern', 'British Library', 'Carnaby Street']
 function find(inquiry){
-  for(place of londonTour){
+  for(let place of londonTour){   // "let" added for assignment resubmission
     if(place===inquiry){
       return true;
     }
