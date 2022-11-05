@@ -105,6 +105,7 @@ console.log('Is it in the itinerary?', find('Tate Modern'));
 // I just tried it here because when it was inside the for loop as an else stmt
 // it stopped the loop after checking only the first array item.
 
+// At time of assignment resubmission, I am understanding this better!
 
 
 
@@ -124,25 +125,21 @@ function isFirstLetter(letter, string) {
 console.log( 'isFirstLetter - should say true', isFirstLetter('a', 'apple') );
 console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
 
+// At time of initial assignment submission, stretch #8 was completed,
+// #9 was partial, and #s 10 and 11 were not touched.
+// Completing all stretches as part of assignment re-submission.
+
 
 // 9. Function to return the sum of all numbers in an array
 let numberArray = [4, 8, 15, 16, 23, 42];
 let sum = 0;
-function sumAll() {
-  for(i=0; i<numberArray.length; i++){
-    sum+=numberArray[i];
+function sumAll(numbers){
+  for(let i = 0; i < numbers.length; i++){
+    sum += numbers[i];
   }
-  // TODO: loop to add items
-  // I think this would use .push to the array?
-  // Out of time for this sesh
   return sum;
 }
-
 console.log(sumAll(numberArray));
-
-
-// Making the call to stop here for this assignment
-// to make sure I spend some time outside before class!
 
 
 
